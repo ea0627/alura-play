@@ -1,0 +1,150 @@
+/* Cabecera */
+.cabecera__container{
+    display: flex; /*alinea elementos uno al lado del otro*/
+    justify-content: space-between; /*ajusta el espacio de los elementos dentro del container*/
+    align-items: center; /*alinea los elementos en el centro del container*/
+    position: fixed; /*Fija el menu en pantalla*/
+    top: 0; /*posicion donde se fja el menu en pantalla*/
+}
+
+.cabecera__buscar__item{
+    display: none;
+}
+
+/*Menu*/
+.menu__container{
+    position: fixed; /*ubica lado ixquierdo superior*/
+    bottom: 0%; /*se ubica en la parte inferior*/ 
+    height: 75px;  /*se reduce el tamaño del contenedor a 75px*/
+    width: 100%; /*se cambia el ancho al 100% del body*/
+}
+
+.menu__lista{
+    display: flex;
+    justify-content: space-around; /*Espacio entre elementos*/
+    height: 100%;
+}
+
+.menu__lista li{
+    align-self: center; /*Alinea elementos en el centro del contenedor*/
+}
+
+.menu__itens{
+    display: flex;
+    flex-direction: column; /*posiciona el icono y el texto en columna, icono arriba texto abajo*/
+    gap: 5px; /*separacion de texto con el icono de 5px*/
+}
+
+.menu__lista:nth-child(2), /*Oculta lista hermana menu__lista posicion2*/
+.menu__lista:nth-child(3), /*Oculta lista hermana menu__lista posicion3*/
+.menu__lista:nth-child(4){ /*Oculta lista hermana menu__lista posicion4*/
+    display: none; /*ocultamiento activo*/
+}
+
+
+/* Seccion Superior */
+.superior__seccion__container{
+    display: flex; /*alinea elementos uno al lado del otro dentro del contenedor*/
+    align-items: center; /*alinea los elementos en el centro del contenedor*/
+    white-space: nowrap; /*Se alinan los textos en un solo renglon*/
+    overflow: scroll; /*Barra de desplazamiento horizontal*/
+    gap: 15px; /*espacio entre elementos de 15px*/
+}
+
+
+/*Seccion Videos*/
+
+
+.videos__item{
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+
+}
+
+.videos__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+
+
+/* Seccion Inferior */
+
+.rodapie__container{ /*clase de etiqueta para el footer en index.html*/
+    display: flex; /*Se ubican al lado del otro*/
+    /* flex-direction: column; /*Cambia la orientacion de los elementos a mostar en columna*/
+    /* flex-wrap: wrap; /*ajusta elementos dentro del contenedor*/
+    flex-flow: column wrap; /*hace lo de flewx direction y flex wrap*/
+    
+}
+
+
+/* MENU LATERAL PARA PANTALLAS DE TABLETS */
+
+@media (min-width: 834px) {
+
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+    
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+    
+    }
+    
+
+@media (min-width:1440px){
+    
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2), /*Oculta lista hermana menu__lista posicion2*/
+    .menu__lista:nth-child(3), /*Oculta lista hermana menu__lista posicion3*/
+    .menu__lista:nth-child(4){ /*Oculta lista hermana menu__lista posicion4*/
+        display: flex; /*ocultamiento activo*/
+    }
+
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+
+    }
+
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .videojuegos{
+        order: 3;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium{
+        order: 1;
+    }
+
+   
+
+}
