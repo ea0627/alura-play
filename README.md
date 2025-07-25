@@ -42,7 +42,7 @@ alura-play/
 
 ## 📸 Captura de pantalla
 
-![Vista previa](./assets/screenshot.png)
+![Vista previa](./assets/alura-play.png)
 
 ---
 
